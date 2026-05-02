@@ -1,0 +1,49 @@
+!### TAGESSCHAU OHNE SCHNICKSCHNACK
+
+!### REDUNDANTES
+
+!--- Kurzüberblick
+tagesschau.de##div.teasergroup:has(div.trenner__text__topline:has-text(Die wichtigsten Nachrichten))
+!--- Top Ten
+tagesschau.de##div.teasergroup:has(div.trenner__text__topline:has-text(Meistgeklickt))
+!--- Links zu weiteren Meldungen
+tagesschau.de##div.buttongroup:has-text(/Weitere .*meldungen/)
+
+!### AUDIO UND VIDEO
+
+!--- Sendungen
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Sendungen))
+!--- Podcasts
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Podcasts))
+!--- Live und Topthemen
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(LIVE UND TOPTHEMEN))
+!--- Multimedia-Inhalte zum Thema
+tagesschau.de##div.teaser__medialinks:has-text(Weiteres Video zum Thema)
+tagesschau.de##div.teaser__medialinks:has-text(Weiteres Audio zum Thema)
+tagesschau.de##div.teaser__medialinks:has-text(Multimedia-Inhalte zum Thema)
+!--- Play-Buttons in Teaser-Bildern
+tagesschau.de##div.teaser--top div.v-instance {visibility: hidden !important;}
+tagesschau.de##div.teaser--small div.v-instance {visibility: hidden !important;}
+tagesschau.de##li.teaser-xs div.v-instance {visibility: hidden !important;}
+
+!### THEMENBEREICHE
+
+!--- Marktbericht, Börsenkurse und Weltmärkte
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Marktbericht))
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Börsenkurse))
+!--- Lotto
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(lotto))
+!--- Wetter
+tagesschau.de##div.teasergroup:has(span.teaser__topline:has-text(Wettervorhersage Deutschland))
+!--- Sport
+tagesschau.de##div.teasergroup:has(span.link-extend__extern:has-text(sportschau))
+tagesschau.de##div.teasergroup:has(span.link-extend__extern:has-text(sportschau)) + div.teasergroup--docked
+tagesschau.de##div.teasergroup--docked:has(iframe[src*="sportschau"])
+tagesschau.de##div.teasergroup--docked:has(iframe[src*="sportschau"]) + div.teasergroup--docked
+tagesschau.de##div.teasergroup:has([href*="/sport/"])
+tagesschau.de##div.teasergroup:has([href*="/sport/"]) + div.teasergroup--docked
+tagesschau.de##div.teasergroup:has([src*="sportschau"])
+tagesschau.de##div.teasergroup:has([src*="sportschau"]) + div.teasergroup--docked
+!--- Faktenfinder
+tagesschau.de##div.teasergroup:has(span.label--standard-primary:has-text(Faktenfinder))
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Faktenfinder))
