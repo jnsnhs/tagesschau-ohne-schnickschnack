@@ -1,0 +1,101 @@
+!### TAGESSCHAU OHNE SCHNICKSCHNACK
+
+
+!### ABLENKENDES UND REDUNDANTES
+
+!--> LÄSST HEADER NICHT MITSCROLLEN
+tagesschau.de##header{position: absolute !important;}
+
+!--> VERKLEINERT SYMBOLBILDER
+tagesschau.de##.teaser-xs__teaserinfo {padding-top: 0px !important;}
+tagesschau.de##.teaser-xs__headline {font-size: 200% !important; line-height: 120% !important;}
+tagesschau.de##.teaser-xs__topline {font-size: 150% !important;}
+tagesschau.de##.teaser-xs__teaserinfo {width: 80% !important;}
+tagesschau.de##.teaser-xs__media {display: block !important; margin-right: 0px !important; width: 20% !important;}
+tagesschau.de##img.ts-image {max-height: 40rem !important; object-fit: cover !important;}
+tagesschau.de##div.teaser__media {max-height: 40rem !important; overflow: hidden !important;}
+tagesschau.de##article img.ts-image {max-height: initial !important; object-fit: cover !important;}
+tagesschau.de##article div.teaser__media {max-height: initial !important; overflow: hidden !important;}
+
+!--> ENTFERNT TEASER-ABSÄTZE IN DEN ARTIKELN
+tagesschau.de##article > div.copytext-element-wrapper:has(div.teaser-absatz)
+
+!--> ENTFERNT HINWEIS AUF ARD-KONTO VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(h3.promo-box__primary-text:has-text(Ihr ARD-Konto))
+
+!--> ENTFERNT „KURZÜBERBLICK“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(div.trenner__text__topline:has-text(Die wichtigsten Nachrichten))
+
+!--> ENTFERNT „TOP TEN“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(div.trenner__text__topline:has-text(Meistgeklickt))
+
+!--> ENTFERNT BUTTONS ZU WEITEREN MELDUNGEN VON DER STARTSEITE
+tagesschau.de##div.buttongroup:has-text(/Weitere .*meldungen/)
+
+!--> ENTFERNT DEN „BACK TO TOP“-BUTTON
+tagesschau.de##.back-to-top
+
+
+!### AUDIO UND VIDEO
+
+!--> ENTFERNT „SENDUNGEN“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Sendungen))
+tagesschau.de/multimedia##div.teasergroup:has(div.trenner__text__headline:has-text(Sendungen)) {display: initial !important;}
+
+!--> ENTFERNT „PODCASTS“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Podcasts))
+tagesschau.de/multimedia##div.teasergroup:has(div.trenner__text__headline:has-text(Podcasts)) {display: initial !important;}
+
+!--> ENTFERNT „LIVE UND TOPTHEMEN“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(LIVE UND TOPTHEMEN))
+
+!--> ENTFERNT „MULTIMEDIA-INHALTE ZUM THEMA“ VON DER STARTSEITE
+tagesschau.de##div.teaser__medialinks:has-text(Weiteres Video zum Thema)
+tagesschau.de##div.teaser__medialinks:has-text(Weiteres Audio zum Thema)
+tagesschau.de##div.teaser__medialinks:has-text(Multimedia-Inhalte zum Thema)
+
+!--> ENTFERNT PLAY-BUTTONS IN SYMBOLBILDERN
+tagesschau.de##div.teaser--top div.v-instance {visibility: hidden !important;}
+tagesschau.de##div.teaser--small div.v-instance {visibility: hidden !important;}
+tagesschau.de##li.teaser-xs div.v-instance {visibility: hidden !important;}
+
+
+!### THEMEN UND RUBRIKEN
+
+!--> ENTFERNT „LOTTOZAHLEN“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(lotto))
+
+!--> ENTFERNT „WETTER“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(span.teaser__topline:has-text(Wettervorhersage Deutschland))
+tagesschau.de/wetter##div.teasergroup:has(span.teaser__topline:has-text(Wettervorhersage Deutschland)) {display: initial !important;}
+
+!--> ENTFERNT „SPORT“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(span.link-extend__extern:has-text(sportschau))
+tagesschau.de##div.teasergroup:has(span.link-extend__extern:has-text(sportschau)) + div.teasergroup--docked
+tagesschau.de##div.teasergroup--docked:has(iframe[src*="sportschau"])
+tagesschau.de##div.teasergroup--docked:has(iframe[src*="sportschau"]) + div.teasergroup--docked
+tagesschau.de##div.teasergroup:has([href*="/sport/"])
+tagesschau.de##div.teasergroup:has([href*="/sport/"]) + div.teasergroup--docked
+tagesschau.de##div.teasergroup:has([src*="sportschau"])
+tagesschau.de##div.teasergroup:has([src*="sportschau"]) + div.teasergroup--docked
+
+!--> ENTFERNT „MARKTBERICHT, BÖRSENKURSE, WELTMÄRKTE“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Marktbericht))
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Börsenkurse))
+tagesschau.de/wirtschaft##div.teasergroup:has(div.trenner__text__headline:has-text(MARKTBERICHT)) {display: initial !important;}
+tagesschau.de/wirtschaft##div.teasergroup:has(div.trenner__text__headline:has-text(Börsenkurse)) {display: initial !important;}
+
+!--> ENTFERNT „FAKTENFINDER“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(span.label--standard-primary:has-text(Faktenfinder))
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Faktenfinder))
+tagesschau.de/faktenfinder##div.teasergroup:has(span.label--standard-primary:has-text(Faktenfinder)) {display: initial !important;}
+tagesschau.de/faktenfinder##div.teasergroup:has(div.trenner__text__headline:has-text(Faktenfinder)) {display: initial !important;}
+
+
+!### SOCIAL MEDIA UND KOMMENTARE
+
+!--> ENTFERNT SOCIAL-MEDIA-BUTTONS IN DEN ARTIKELN
+tagesschau.de##ul.socialbuttons__list
+
+!--> ENTFERNT „KOMMENTARE ZUR MELDUNG“ IN DEN ARTIKELN
+tagesschau.de##.buttongroup__item:has(span.btn__label:has-text(Kommentare zur Meldung))
