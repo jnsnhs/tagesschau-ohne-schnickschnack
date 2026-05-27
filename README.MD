@@ -37,7 +37,7 @@ Die Einbindung der Filterdatei wird ausführlich am Beispiel von Firefox erläut
 
 ![Schritt 5](./doc/stepE.jpg)
 
-6. Im Registerreiter **Meine Filter** (*My filters*) fügen Sie den Inhalt der Filterdatei aus der Zwischanblage ein. Mit einem abschließenden Klick auf **Änderungen übernehmen** (*Apply Changes*) speichern Sie die eingefügten Filter dauerhaft:
+6. Im Registerreiter **„Meine Filter“** (*My filters*) fügen Sie den Inhalt der Filterdatei aus der Zwischanblage ein. Mit einem abschließenden Klick auf **„Änderungen übernehmen“** (*Apply Changes*) speichern Sie die eingefügten Filter dauerhaft:
 
 ![Schritt 6](./doc/stepF.jpg)
 
