@@ -19,37 +19,37 @@ Die Einbindung der Filterdatei wird ausführlich am Beispiel von Firefox erläut
 
 1. Laden Sie die **Filterdatei** ([Link](./filterdatei/tagesschau-ohne-schnickschnack.txt)) herunter – oder kopieren sie ihren Inhalt einfach in die Zwischenablage.
 
-![Schritt 1](./doc/stepA.png)
+![Schritt 1](./doc/stepA.jpg)
 
 2. Fügen Sie **uBlock Origin** ([Link](https://addons.mozilla.org/firefox/addon/ublock-origin/)) ihrem Browser hinzu. Nach der Installation sollte die Erweiterung als Icon neben der Adressleiste sichtbar sein.
 
-![Schritt 2](./doc/stepB.png)
+![Schritt 2](./doc/stepB.jpg)
 
 3. Wählen Sie im Hauptmenü den Eintrag „**Einstellungen**“ (*Settings*):
 
-![Schritt 3](./doc/stepC.png)
+![Schritt 3](./doc/stepC.jpg)
 
 3. In den Einstellungen klicken Sie auf **„Erweiterungen und Themes“** (*Extensions and Themes*):
 
-![Schritt 4](./doc/stepD.png)
+![Schritt 4](./doc/stepD.jpg)
 
 5. Mit einem Klick auf die drei Punkte neben der Erweiterung uBlock Origin gelangen Sie in die „**Optionen**“:
 
-![Schritt 5](./doc/stepE.png)
+![Schritt 5](./doc/stepE.jpg)
 
 6. Im Registerreiter **Meine Filter** (*My filters*) fügen Sie den Inhalt der Filterdatei entweder aus der Zwischanblage ein oder Sie ladenn die Datei über den Button **Importieren und Hinzufügen** (*Import and append…*). Mit einem abschließenden Klick auf **Änderungen übernehmen** speichern Sie eingefügten Filter dauerhaft:
 
-![Schritt 6](./doc/stepF.png)
+![Schritt 6](./doc/stepF.jpg)
 
 
 ## Erläuterung der Filter
 
 Die Datei `tagesschau-ohne-schnickschnack.txt` teilt die verschiedenen Filter in vier Kategorien auf:
 
-- **Ablenkendes und Redundantes**: Diese Filter korrigieren Design-Elemente, die  meinem Empfinden nach störend sind, und entfert ausschließlich jene Inhalte von der Startseite, die dort mehrfach vorkommen.
-- **Audio und Video**: Filter in dieser Kategorie befreien die Startseite (und nur diese) von Audio- und Video-Elementen.
-- **Themen und Rubriken**: Inhalte, die nur eingeschränkten Nachrichtenwert haben (z.B. Wetter oder Sport), werden mit diesen Filtern entfernt. Diese Entscheidungen sind hochgradig subjektiv und sollten individuell angepasst werden!
-- **Social Media und Kommentare**: Eine kleine Grupepe von Filtern, die einige Social-Media-Features von den Artikelseiten entfernt.
+- [Ablenkendes und Redundantes](#ablenkendes-und-redundantes): Diese Filter korrigieren Design-Elemente, die  meinem Empfinden nach störend sind, und entfert ausschließlich jene Inhalte von der Startseite, die dort mehrfach vorkommen.
+- [Audio und Video](#audio-und-video): Filter in dieser Kategorie befreien die Startseite (und nur diese) von Audio- und Video-Elementen.
+- [Themen und Rubriken](#themen-und-rubriken): Inhalte, die nur eingeschränkten Nachrichtenwert haben (z.B. Wetter oder Sport), werden mit diesen Filtern entfernt. Diese Entscheidungen sind hochgradig subjektiv und sollten individuell angepasst werden!
+- [Social Media und Kommentare](#social-media-und-kommentare): Eine kleine Grupepe von Filtern, die einige Social-Media-Features von den Artikelseiten entfernt.
 
 Anhand der folgenden Erläuterungen können Sie die Kategorien individuell anpassen, indem Sie solche Filter entfernen, die Ihnen zu restriktiv sind.
 
@@ -145,9 +145,7 @@ tagesschau.de##div.teaser--small div.v-instance {visibility: hidden !important;}
 tagesschau.de##li.teaser-xs div.v-instance {visibility: hidden !important;}
 ```
 
-
-### Themenbereiche
-
+### Themen und Rubriken
 
 Sie halten nichts von Glückspiel? Dann benötigen Sie auch keinen Infokasten, der am Ende der Hauptseite über die Ziehung der **Lottozahlen** informiert:
 
