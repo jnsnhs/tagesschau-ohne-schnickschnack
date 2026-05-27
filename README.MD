@@ -10,7 +10,7 @@ Die Internetseite der [Tagesschau](https://www.tagesschau.de/) ist seit vielen J
 
 Diese und weitere störende Gestaltungselemente können mit gezielten CSS-Filtern und der Browser-Erweiterung [uBlock Origin](https://github.com/gorhill/uBlock) korrigiert oder gleich ganz beseitigt werden. Auch die Sichtbarkeit von Inhalten wie Sport, Lotto oder Wetter lässt sich nach Belieben reduzieren. Dadurch gewinnt besonders die Hauptseite an Informationsdichte: Sie ist kompakter, schneller zu überblicken und wird zu einer „Tagesschau ohne Schnickschnack“.
 
-**[📰  DIREKT ZUR FILTERDATEI](./tagesschau-filter/tagesschau-ublock-filter.txt) (Stand: 2026-05-26)**
+**[➡️ DIREKT ZUR FILTERDATEI](./tagesschau-filter/tagesschau-ublock-filter.txt) (Stand: 2026-05-26)**
 
 
 ## Anleitung zur Einbindung
@@ -21,7 +21,7 @@ Die Einbindung der Filterdatei wird ausführlich am Beispiel von Firefox erläut
 
 ![Schritt 1](./doc/stepA.jpg)
 
-2. Fügen Sie **uBlock Origin** ([Link](https://addons.mozilla.org/firefox/addon/ublock-origin/)) ihrem Browser hinzu. Nach der Installation sollte die Erweiterung als Icon neben der Adressleiste sichtbar sein.
+2. Sofern noch nicht vorhanden: Fügen Sie **uBlock Origin** ([Link](https://addons.mozilla.org/firefox/addon/ublock-origin/)) ihrem Browser hinzu. Nach der Installation sollte die Erweiterung als Icon neben der Adressleiste sichtbar sein.
 
 ![Schritt 2](./doc/stepB.jpg)
 
@@ -46,12 +46,12 @@ Die Einbindung der Filterdatei wird ausführlich am Beispiel von Firefox erläut
 
 Die Datei `tagesschau-ohne-schnickschnack.txt` teilt die verschiedenen Filter in vier Kategorien auf:
 
-- [Ablenkendes und Redundantes](#ablenkendes-und-redundantes): Diese Filter korrigieren Design-Elemente, die  meinem Empfinden nach störend sind, und entfert ausschließlich jene Inhalte von der Startseite, die dort mehrfach vorkommen.
-- [Audio und Video](#audio-und-video): Filter in dieser Kategorie befreien die Startseite (und nur diese) von Audio- und Video-Elementen.
-- [Themen und Rubriken](#themen-und-rubriken): Inhalte, die nur eingeschränkten Nachrichtenwert haben (z.B. Wetter oder Sport), werden mit diesen Filtern entfernt. Diese Entscheidungen sind hochgradig subjektiv und sollten individuell angepasst werden!
-- [Social Media und Kommentare](#social-media-und-kommentare): Eine kleine Grupepe von Filtern, die einige Social-Media-Features von den Artikelseiten entfernt.
+- [Ablenkendes und Redundantes](#ablenkendes-und-redundantes): Diese Filter beziehen sich auf den eigentlichen *Schnickschnack*. Sie korrigieren misslungene Design-Entscheidungen undentfernen ausschließlich solche Inhalte von der Startseite, die dort *mehrfach* angezeigt werden.
+- [Audio und Video](#audio-und-video): Filter in dieser Kategorie befreien die Startseite und die Ressort-Seiten (aber *nicht* die Artikelseiten) von Audio- und Video-Elementen. Nur dann sinnvoll, wenn Sie die Nachrichten ausschließlich lesen wollen.
+- [Themen und Rubriken](#themen-und-rubriken): Inhalte, die nur eingeschränkten Nachrichtenwert haben (z.B. Wetter oder Sport), werden mit diesen Filtern entfernt. Hochgradig subjektiv, sollte individuell angepasst werden!
+- [Social Media und Kommentare](#social-media-und-kommentare): Eine kleine Gruppe von Filtern, die Social-Media-Features von den Artikelseiten entfernt.
 
-Anhand der folgenden Erläuterungen können Sie die Kategorien individuell anpassen, indem Sie solche Filter entfernen, die Ihnen zu restriktiv sind.
+Nachfolgend werden alle Filter detailliert beschrieben, sodass Sie die Liste individuell anpassen und jene Filter, die Ihnen zu restriktiv erscheinen, gezielt löschen können.
 
 ### Ablenkendes und Redundantes
 
@@ -61,7 +61,7 @@ Ein **fixierter Header** verdeckt seit dem Relaunch im Januar 2021 dauerhaft ein
 tagesschau.de##header{position: absolute !important;}
 ```
 
-Folgende Zeilen reduzieren die **Größe der Symbolbilder** und verkleinern auch die dazugehörige Typografie:
+Folgende Zeilen reduzieren die **Größe der Symbolbilder** und verkleinern auch die Typografie der angrenzenden Überschriften:
 
 ```
 tagesschau.de##.teaser-xs__teaserinfo {padding-top: 0px !important;}
@@ -86,19 +86,19 @@ In einer dunkelblauen „Promo-Box“ wird auf Startseite dauerhaft für das **A
 tagesschau.de##div.teasergroup:has(h3.promo-box__primary-text:has-text(Ihr ARD-Konto))
 ```
 
-Ein **Kurzüberblick** im oberen BEreich der Hauptseite enthält Verlinkungen zu Artikeln, die ohnehin im weiteren Verlauf der Seite zu finden sind:
+Ein **Kurzüberblick** im oberen Bereich der Hauptseite enthält Verlinkungen zu Artikeln, die ohnehin im weiteren Verlauf der Seite zu finden sind:
 
 ```
 tagesschau.de##div.teasergroup:has(div.trenner__text__topline:has-text(Die wichtigsten Nachrichten))
 ```
 
-In einer überdimensioniert dargestellten **Top Ten** versammelt die Hauptseite die meistgeklickten Artikel. Auch hierbei handelt es sich jedoch nur um Verlinkungen zu Artikeln, die auf der Startseite an anderer Stelle bereits vorhanden sind:
+In einer überdimensioniert dargestellten **Top Ten** versammelt die Startseite die meistgeklickten Artikel. Auch hierbei handelt es sich nur um Verlinkungen zu Artikeln, die an anderer Stelle auf der Startseite bereits vorhanden sind:
 
 ```
 tagesschau.de##div.teasergroup:has(div.trenner__text__topline:has-text(Meistgeklickt))
 ```
 
-Die Ressort-Abschnitte auf der Hauptseite enthalten in ihrer unteren rechten Ecke in der Regel einen grauen Button, über den **weitere Meldungen** aus dem jeweiligen Ressort zu erreichen sind (z.B. „Weitere Inlandsmeldungen“). Weil aber bereits die Titel der Ressorts die gleichen Verlinkungen besitzen und ebenfalls zur Ressort-Hauptseite führen, sind weitere Buttons – stets nur wenige Pixel weiter unten – redundant:
+Die Ressort-Abschnitte auf der Hauptseite enthalten in ihrer unteren rechten Ecke in der Regel einen grauen Button, über den **weitere Meldungen** aus dem jeweiligen Ressort zu erreichen sind (z.B. „Weitere Inlandsmeldungen“). Weil die Titel der Ressorts die gleichen Verlinkungen besitzen und ebenfalls zu den Ressort-Hauptseiten führen, sind weitere Buttons in unmittelbarer Nähe überflüssig:
 
 ```
 tagesschau.de##div.buttongroup:has-text(/Weitere .*meldungen/)
@@ -118,7 +118,7 @@ Ein dunkelblauer Kasten in der Mitte der Hauptseite hält die letzten **Sendunge
 tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Sendungen))
 ```
 
-Im letzten Viertel der Hauptseite werden häufig  Podcast-Produktionen der ARD beworben. Wer **Podcasts** lieber über einen Client bezieht, blendet diese Hinweise auf:
+Im letzten Viertel der Hauptseite werden häufig  Podcast-Produktionen der ARD beworben. Wer **Podcasts** lieber über einen Client bezieht, blendet diese Hinweise aus:
 
 ```
 tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Podcasts))
@@ -131,7 +131,7 @@ Unter der Überschrift **Live und Topthemen** sind im oberen Bereich der Hauptse
 tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(LIVE UND TOPTHEMEN))
 ```
 
-Einigen Meldungen auf der Hauptseite sind Buttons angeheftet, die **Multimedia-Inhalte zum Thema** (d.h. Audio- und/oder Videobeiträgt) öffnen:
+An einige Meldungen auf der Hauptseite sind Buttons angeheftet, die **Multimedia-Inhalte zum Thema** (d.h. Audio- und/oder Videobeiträge) öffnen:
 
 ```
 tagesschau.de##div.teaser__medialinks:has-text(/.* zum Thema/)
@@ -147,20 +147,20 @@ tagesschau.de##li.teaser-xs div.v-instance {visibility: hidden !important;}
 
 ### Themen und Rubriken
 
-Sie halten nichts von Glückspiel? Dann benötigen Sie auch keinen Infokasten, der am Ende der Hauptseite über die Ziehung der **Lottozahlen** informiert:
+Sie halten nichts von Glückspiel? Dann benötigen Sie auch keinen Infokasten, der am Ende der Startseite über die Ziehung der **Lottozahlen** informiert:
 
 ```
 tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(lotto))
 ```
 
-Informationen über das kommende **Wetter** werden mit folgenden Filtern von der Hauptseite entfernt:
+Informationen über das kommende **Wetter** werden mit folgenden Filtern von der Startseite entfernt:
 
 ```
 tagesschau.de##div.teasergroup:has(span.teaser__topline:has-text(Wettervorhersage Deutschland))
 tagesschau.de##div.layout-container:has(h1:has-text(Wetter)) div.teasergroup:has(span.teaser__topline:has-text(Wettervorhersage Deutschland)) {display: initial !important;}
 ```
 
-Meldungen, die sich auf den **Sport** (und das heißt in den meisten Fällen: Fußball) beziehen, sind din der Regel Verlinkungen zur [Sportschau](https://www.sportschau.de), weshalb die Tagesschau auch keine eigene Sport-Rubrik besitzt. Ich persönlich halte reine Sportberichterstattung nicht für essentielle Nachrichten und blende sie daher aus:
+Meldungen, die sich auf den **Sport** (und das heißt in den meisten Fällen: Fußball) beziehen, sind in der Regel Verlinkungen zur [Sportschau](https://www.sportschau.de). Die Tagesschau besitzt daher auch keine eigene Sport-Rubrik. Ich persönlich halte reine Sportberichterstattung nicht für essentielle Nachrichten und blende sie daher aus:
 
 ```
 tagesschau.de##div.teasergroup:has(span.link-extend__extern:has-text(sportschau))
@@ -182,7 +182,7 @@ tagesschau.de##div.layout-container:has(h1:has-text(Wirtschaft und Börsen-Nachr
 tagesschau.de##div.layout-container:has(h1:has-text(Wirtschaft und Börsen-Nachrichten)) div.teasergroup:has(div.trenner__text__headline:has-text(Börsenkurse)) {display: initial !important;}
 ```
 
-Ich persönlich ziehe es vor, auch die Rubrik **Faktenfinder** von der Startseite zu entfernen. Der Faktenfinder greift regelmäßig Gerüchte, Desinformationen, Propaganda sowie Hass und Hetze aus den sozialen Medien auf, um diese zu korrigieren oder zu widerlegen. Das ist grundsätzlich sehr lobenswert! Aber: Ich persönlich nutze soziale Medien bewusst nicht und erfahre erst *durch* den Faktenfinder detailliert davon, welcher Wahnsinn sich regelmäßig auf den einschlägigen Plattformen abspielt. Folgende Filter ersparen mir diese Exkurse:
+🚨 **Achtung, unbedingt selbst entscheiden:** Auch die Meldungen der Rubrik **Faktenfinder** entferne ich persönlich von der Startseite. Der Faktenfinder greift regelmäßig Gerüchte, Desinformationen, Propaganda sowie Hass und Hetze aus den sozialen Medien auf, um diese zu korrigieren oder zu widerlegen. Das ist grundsätzlich sehr lobenswert! Aber: Ich persönlich nutze soziale Medien bewusst nicht und erfahre erst *durch* den Faktenfinder detailliert davon, welcher Wahnsinn sich regelmäßig auf den einschlägigen Plattformen abspielt. Diesen Exkurs ersparen mir die folgenden Zeilen:
 
 ```
 tagesschau.de##div.teasergroup:has(span.label--standard-primary:has-text(Faktenfinder))
