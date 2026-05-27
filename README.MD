@@ -10,12 +10,12 @@ Die Internetseite der [Tagesschau](https://www.tagesschau.de/) ist seit vielen J
 
 Diese und weitere störende Gestaltungselemente können mit gezielten CSS-Filtern und der Browser-Erweiterung [uBlock Origin](https://github.com/gorhill/uBlock) korrigiert oder gleich ganz beseitigt werden. Auch die Sichtbarkeit von Inhalten wie Sport, Lotto oder Wetter lässt sich nach Belieben reduzieren. Dadurch gewinnt besonders die Hauptseite an Informationsdichte: Sie ist kompakter, schneller zu überblicken und wird zu einer „Tagesschau ohne Schnickschnack“.
 
-**[⬇️  DOWNLOAD](./tagesschau-filter/tagesschau-ublock-filter.txt) (Stand: 2026-05-26)**
+**[📰  DIREKT ZUR FILTERDATEI](./tagesschau-filter/tagesschau-ublock-filter.txt) (Stand: 2026-05-26)**
 
 
 ## Anleitung zur Einbindung
 
-Die Einbindung der Filterdatei wird ausführlich am Beispiel von Firefox erläutert. Dieser Browser unterstützt sowohl in seiner Desktop- also auch in der Mobil-Version für Android die Extension *uBlock Origin* in vollem Umfang.
+Die Einbindung der Filterdatei wird ausführlich am Beispiel von Firefox erläutert. Dieser Browser unterstützt sowohl in seiner Desktop- also auch in der Mobil-Version für Android die notwendige Extension *uBlock Origin* in vollem Umfang.
 
 1. Rufen Sie die **Filterdatei** ([Link](./filterdatei/tagesschau-ohne-schnickschnack.txt)) auf und kopieren Sie ihren Inhalt in die Zwischenablage.
 
