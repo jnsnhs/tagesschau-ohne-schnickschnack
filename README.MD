@@ -33,7 +33,7 @@ Die Einbindung der Filterdatei wird ausführlich am Beispiel von Firefox erläut
 
 ![Schritt 4](./doc/stepD.jpg)
 
-5. Mit einem Klick auf die drei Punkte neben der Erweiterung uBlock Origin gelangen Sie in die „**Optionen**“:
+5. Mit einem Klick auf die drei Punkte neben der Erweiterung uBlock Origin gelangen Sie in die „**Einstellungen**“ (*Options*):
 
 ![Schritt 5](./doc/stepE.jpg)
 
