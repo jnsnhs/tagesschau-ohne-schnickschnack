@@ -74,8 +74,8 @@ tagesschau.de##div.teasergroup:has(span.link-extend__extern:has-text(sportschau)
 tagesschau.de##div.teasergroup:has(span.link-extend__extern:has-text(sportschau)) + div.teasergroup--docked
 tagesschau.de##div.teasergroup--docked:has(iframe[src*="sportschau"])
 tagesschau.de##div.teasergroup--docked:has(iframe[src*="sportschau"]) + div.teasergroup--docked
-tagesschau.de##div.teasergroup:has([href*="/sport/"])
-tagesschau.de##div.teasergroup:has([href*="/sport/"]) + div.teasergroup--docked
+tagesschau.de##div.teasergroup:has([href*="sportschau"])
+tagesschau.de##div.teasergroup:has([href*="sportschau"]) + div.teasergroup--docked
 tagesschau.de##div.teasergroup:has([src*="sportschau"])
 tagesschau.de##div.teasergroup:has([src*="sportschau"]) + div.teasergroup--docked
 
