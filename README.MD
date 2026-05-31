@@ -10,7 +10,7 @@ Die Internetseite der [Tagesschau](https://www.tagesschau.de/) ist seit vielen J
 
 Diese und weitere störende Gestaltungselemente können mit gezielten CSS-Filtern und der Browser-Erweiterung [uBlock Origin](https://github.com/gorhill/uBlock) korrigiert oder gleich ganz beseitigt werden. Auch die Sichtbarkeit von Inhalten wie Sport, Lotto oder Wetter lässt sich nach Belieben reduzieren. Dadurch gewinnt besonders die Hauptseite an Informationsdichte: Sie ist kompakter, schneller zu überblicken und wird zu einer „Tagesschau ohne Schnickschnack“.
 
-**[➡️ DIREKT ZUR FILTERDATEI](./tagesschau-filter/tagesschau-ublock-filter.txt) (Stand: 2026-05-26)**
+**[➡️ DIREKT ZUR FILTERDATEI](./filterdatei/tagesschau-ohne-schnickschnack.txt) (Stand: 2026-05-26)**
 
 
 ## Anleitung zur Einbindung
@@ -167,8 +167,8 @@ tagesschau.de##div.teasergroup:has(span.link-extend__extern:has-text(sportschau)
 tagesschau.de##div.teasergroup:has(span.link-extend__extern:has-text(sportschau)) + div.teasergroup--docked
 tagesschau.de##div.teasergroup--docked:has(iframe[src*="sportschau"])
 tagesschau.de##div.teasergroup--docked:has(iframe[src*="sportschau"]) + div.teasergroup--docked
-tagesschau.de##div.teasergroup:has([href*="/sport/"])
-tagesschau.de##div.teasergroup:has([href*="/sport/"]) + div.teasergroup--docked
+tagesschau.de##div.teasergroup:has([href*="sportschau"])
+tagesschau.de##div.teasergroup:has([href*="sportschau"]) + div.teasergroup--docked
 tagesschau.de##div.teasergroup:has([src*="sportschau"])
 tagesschau.de##div.teasergroup:has([src*="sportschau"]) + div.teasergroup--docked
 ```
