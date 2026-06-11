@@ -17,7 +17,7 @@ Diese und weitere störende Gestaltungselemente können mit gezielten CSS-Filter
 
 Die Einbindung der Filterdatei wird ausführlich am Beispiel von Firefox erläutert. Dieser Browser unterstützt sowohl in seiner Desktop- also auch in der Mobil-Version für Android die notwendige Extension *uBlock Origin* in vollem Umfang.
 
-1. Rufen Sie die **Filterdatei** ([Link](./filterdatei/tagesschau-ohne-schnickschnack.txt)) auf und kopieren Sie ihren Inhalt in die Zwischenablage.
+1. Rufen Sie die **Filterdatei** ([Link](./filterdatei/tagesschau-ohne-schnickschnack.txt)) auf und kopieren Sie den Inhalt in die Zwischenablage.
 
 ![Schritt 1](./doc/stepA.jpg)
 
