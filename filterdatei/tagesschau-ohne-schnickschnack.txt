@@ -44,7 +44,9 @@ tagesschau.de/multimedia##div.teasergroup:has(div.trenner__text__headline:has-te
 
 !--> ENTFERNT „PODCASTS“ VON DER STARTSEITE
 tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Podcasts))
+tagesschau.de##div.teasergroup:has(span.label--standard-primary:has-text(Podcast))
 tagesschau.de/multimedia##div.teasergroup:has(div.trenner__text__headline:has-text(Podcasts)) {display: initial !important;}
+tagesschau.de/multimedia##div.teasergroup:has(span.label--standard-primary:has-text(Podcast)) {display: initial !important;}
 
 !--> ENTFERNT „LIVE UND TOPTHEMEN“ VON DER STARTSEITE
 tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(LIVE UND TOPTHEMEN))
