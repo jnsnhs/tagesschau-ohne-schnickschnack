@@ -82,8 +82,10 @@ tagesschau.de##div.teasergroup:has([src*="sportschau"])
 tagesschau.de##div.teasergroup:has([src*="sportschau"]) + div.teasergroup--docked
 
 !--> ENTFERNT „MARKTBERICHT, BÖRSENKURSE, WELTMÄRKTE“ VON DER STARTSEITE
+tagesschau.de##div.teasergroup:has(span.label--standard-primary:has-text(Marktbericht))
 tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Marktbericht))
 tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(Börsenkurse))
+tagesschau.de/faktenfinder##div.teasergroup:has(span.label--standard-primary:has-text(Marktbericht)) {display: initial !important;}
 tagesschau.de/wirtschaft##div.teasergroup:has(div.trenner__text__headline:has-text(MARKTBERICHT)) {display: initial !important;}
 tagesschau.de/wirtschaft##div.teasergroup:has(div.trenner__text__headline:has-text(Börsenkurse)) {display: initial !important;}
 
