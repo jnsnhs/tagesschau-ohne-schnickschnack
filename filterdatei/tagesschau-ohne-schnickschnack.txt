@@ -48,8 +48,9 @@ tagesschau.de##div.teasergroup:has(span.label--standard-primary:has-text(Podcast
 tagesschau.de/multimedia##div.teasergroup:has(div.trenner__text__headline:has-text(Podcasts)) {display: initial !important;}
 tagesschau.de/multimedia##div.teasergroup:has(span.label--standard-primary:has-text(Podcast)) {display: initial !important;}
 
-!--> ENTFERNT „LIVE UND TOPTHEMEN“ VON DER STARTSEITE
+!--> ENTFERNT „LIVE UND TOPTHEMEN“ UND „AKTUELLE VIDEOS“ VON DER STARTSEITE
 tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(LIVE UND TOPTHEMEN))
+tagesschau.de##div.teasergroup:has(div.trenner__text__headline:has-text(AKTUELLE VIDEOS))
 
 !--> ENTFERNT „MULTIMEDIA-INHALTE ZUM THEMA“ VON DER STARTSEITE
 tagesschau.de##div.teaser__medialinks:has-text(Weiteres Video zum Thema)
